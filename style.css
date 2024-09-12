@@ -91,7 +91,7 @@ body {
     top: 10px;
     left: 10px;
     width: 200px;
-    height: 450px;
+    height: calc(100% - 70px);
     background-color: #121212;
     border-radius: 5px;
     padding: 20px;
@@ -139,20 +139,117 @@ body {
     margin-bottom: 10px;
 }
 
-/* Custom Scrollbar */
-.sidebar::-webkit-scrollbar {
-    width: 8px;
+/* Main */
+.main {
+    position: fixed;
+    top: 10px;
+    right: 0; 
+    width: 1025px;
+    height: 450px;
+    background-color: #121212;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 70px;
+    color: white;
+    margin-right: 10px;
+    overflow-y: auto;
 }
 
-.sidebar::-webkit-scrollbar-track {
+.main h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.main .song {
+    display: flex;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.main .song img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.main .song .info {
+    flex: 1;
+}
+
+.main .song .info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.main .song .info p {
+    color: #B3B3B3;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Music Control */
+.music-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #000; /* Black background */
+    padding: 20px; /* Increased height */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.music-controls .progress-bar {
+    flex: 1;
+    margin: 0 10px;
     background-color: #333;
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
-    background-color: #4b4457;
-    border-radius: 4px;
+.music-controls .progress-bar .progress {
+    background-color: #7E57C2;
+    height: 100%;
+    width: 0%; /* Initial width */
+    border-radius: 5px;
 }
 
-.sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: #504563;
+.music-controls .current-time,
+.music-controls .total-time {
+    color: white;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.music-controls #volume {
+    width: 100px;
+    margin: 0 10px;
+}
+
+.music-controls #speed {
+    margin-right: 25px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
 }
