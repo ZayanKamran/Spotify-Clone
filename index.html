@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player Example</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <div class="navbar">
@@ -34,21 +37,101 @@
 
     <div class="main">
         <h2>Now Playing</h2>
-        <div class="song">
-            <img src="./img/song1.jpg" alt="Song 1">
+
+        <!-- Add your songs here. Format them as shown below -->
+        <div class="song" data-audio="./songs/Yalgaar.m4a">
+            <img src="./img/Yalgaar.jfif" alt="Yalgaar">
             <div class="info">
-                <h3>Song Title 1</h3>
-                <p>Artist 1</p>
+                <h3>Yalgaar</h3>
+                <p>CarryMinati</p>
             </div>
         </div>
-        <div class="song">
-            <img src="./img/song2.jpg" alt="Song 2">
+        <div class="song" data-audio="songs/Tum Mere.m4a">
+            <img src="./img/Tum Mere.jfif" alt="Tum Mere">
             <div class="info">
-                <h3>Song Title 2</h3>
-                <p>Artist 2</p>
+                <h3>Tum Mere</h3>
+                <p>Fukra Insaan</p>
             </div>
         </div>
-        <!-- Add more songs here -->
+        <div class="song" data-audio="songs/Tum Mere 2.m4a">
+            <img src="./img/Tum Mere 2.jfif" alt="Tum Mere 2">
+            <div class="info">
+                <h3>Tum Mere 2</h3>
+                <p>Triggered Insaan</p>
+            </div>
+        </div>
+        <div class="song" data-audio="songs/Game on.m4a">
+            <img src="./img/Game On.jfif" alt="Game On">
+            <div class="info">
+                <h3>Game On</h3>
+                <p>Techo Gamer</p>
+            </div>
+        </div>
+        <div class="song" data-audio="songs/Pushpa.m4a">
+            <img src="./img/Pushpa.jfif" alt="Pushpa">
+            <div class="info">
+                <h3>Pushpa</h3>
+                <p>Allu Arjun</p>
+            </div>
+        </div>
+
+       <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">For the Record</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Communities</h4>
+            <ul>
+                <li><a href="#">For Artists</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Vendors</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Free Mobile App</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Spotify Plans</h4>
+            <ul>
+                <li><a href="#">Premium Individual</a></li>
+                <li><a href="#">Premium Duo</a></li>
+                <li><a href="#">Premium Family</a></li>
+                <li><a href="#">Premium Student</a></li>
+                <li><a href="#">Spotify Free</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <ul>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Safety & Privacy Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">About Ads</a></li>
+            <li><a href="#">Accessibility</a></li>
+        </ul>
+        <p>&copy; 2024 Spotify AB</p>
+    </div>
+</footer>
+
     </div>
 
     <!-- Music Controls -->
@@ -70,7 +153,6 @@
             <option value="2">2x</option>
         </select>
     </div>
-
 
     <script src="script.js"></script>
 </body>
